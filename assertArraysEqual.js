@@ -19,5 +19,3 @@ const eqArrays = function(array1, array2) {
   };
   return true;
 };
-
-assertArraysEqual(["hello", 2, 3], ["hello", 2, 3]);
