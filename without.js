@@ -1,5 +1,5 @@
 const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if (eqArrays(arrayOne, arrayTwo)) {
+  if ((eqArrays(arrayOne, arrayTwo) === true)) {
     console.log(`\u2705\u2705\u2705 Arrays are equal`);
   } else {
     console.log(`\u26D4\u26D4\u26D4 Arrays are NOT equal`);
