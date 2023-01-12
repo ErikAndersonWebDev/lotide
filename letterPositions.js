@@ -19,3 +19,20 @@ const assertArraysEqual = function(actual, expected) {
     console.log(`\u26D4\u26D4\u26D4Arrays are NOT equal`);
   }
 };
+
+const letterPositions = function(sentence) {
+  const results = {};
+  for (let i = 0; i < sentence.length; i++) {
+    if (!results[sentence[i]]) {
+      results[sentence[i]] = [];
+      results[sentence[i]].push(i);
+    } else {
+      results[sentence[i]].push(i);
+    }
+  }
+  return results;
+}
+
+console.log(letterPositions("hello").e)
+
+assertArraysEqual(letterPositions("hello").e, [1]);

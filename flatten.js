@@ -12,8 +12,8 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
     console.log(`\u2705\u2705\u2705Arrays are equal`);
   } else {
     console.log(`\u26D4\u26D4\u26D4Arrays are NOT equal`);

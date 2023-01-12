@@ -1,11 +1,3 @@
-const assertArraysEqual = function(arrayOne, arrayTwo) {
-  if ((eqArrays(arrayOne, arrayTwo) === true)) {
-    console.log(`\u2705\u2705\u2705 Arrays are equal`);
-  } else {
-    console.log(`\u26D4\u26D4\u26D4 Arrays are NOT equal`);
-  }
-};
-
 const eqArrays = function(array1, array2) {
   if (array1.length != array2.length) {
     return false;
@@ -16,8 +8,16 @@ const eqArrays = function(array1, array2) {
     } else {
       return false;
     };
-  };
+  }
   return true;
+};
+
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    console.log(`\u2705\u2705\u2705Arrays are equal`);
+  } else {
+    console.log(`\u26D4\u26D4\u26D4Arrays are NOT equal`);
+  }
 };
 
 const without = function(source, itemsToRemove) {
