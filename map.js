@@ -30,3 +30,8 @@ const map = function(array, callback) {
 const words = ["ground", "control", "to", "major", "tom"];
 const result = map(words, word => word[0]);
 
+const doubleArray = [["dog"], ["cat"], ["horse"], ["pig"]];
+const result1 = map(doubleArray, singleArray => singleArray[0]);
+
+assertArraysEqual(result, ["g", "c", "t", "m", "t"]);
+assertArraysEqual(result1, ["dog", "cat", "horse", "pig"]);
