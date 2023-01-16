@@ -7,15 +7,13 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(allItems) {
-  const results = {};
+  let x = 0;
   for (const item of allItems) {
     if (item !== " ") {
-      if (results[item]) {
-        results[item] += 1;
-      } else {
-        results[item] = 1
-      }
+        x++;
     }
   }
-  return results;
+  return x;
 };
+
+assertEqual(countLetters("hello world"), 10); // true
